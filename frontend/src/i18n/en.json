@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "chat": "Chat",
+    "history": "History",
+    "profile": "Profile",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Your AI Assistant",
+    "subtitle": "Experience the power of multiple AI models in one beautiful interface",
+    "description": "Chat with advanced AI models, save your conversations, and get personalized insights. Choose from Mistral, Groq, or Gemini for your perfect AI companion.",
+    "cta": "Start Chatting",
+    "secondaryCta": "Learn More"
+  },
+  "cta": {
+    "title": "Ready to start chatting?",
+    "description": "Join thousands of users already experiencing the future of AI conversations"
+  },
+  "footer": {
+    "copyright": "© 2025 AI Chat Platform. All rights reserved."
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need for intelligent conversations",
+    "multiModel": {
+      "title": "Multiple AI Models",
+      "description": "Choose from Mistral, Groq, or Gemini based on your needs"
+    },
+    "history": {
+      "title": "Chat History",
+      "description": "Never lose a conversation. Access your complete chat history anytime"
+    },
+    "personalized": {
+      "title": "Personalized Experience",
+      "description": "AI-generated summaries help understand your interests and preferences"
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Full support for English and Arabic with RTL layout"
+    },
+    "secure": {
+      "title": "Secure & Private",
+      "description": "Your data is encrypted and stored securely"
+    },
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "Beautiful interface that works on all devices"
+    }
+  },
+  "about": {
+    "title": "About Our Platform",
+    "description": "We're building the future of AI-powered conversations. Our platform combines the best AI models with an intuitive interface to provide you with the most intelligent and helpful assistant experience.",
+    "mission": "Our mission is to make advanced AI accessible to everyone, regardless of language or technical expertise."
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "loginSubtitle": "Sign in to continue your conversations",
+    "signupTitle": "Create Account",
+    "signupSubtitle": "Join us and start chatting with AI",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Full Name",
+    "loginButton": "Sign In",
+    "signupButton": "Create Account",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signupLink": "Sign up",
+    "loginLink": "Sign in",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "namePlaceholder": "Enter your full name"
+  },
+  "chat": {
+    "title": "Chat",
+    "selectModel": "Select AI Model",
+    "models": {
+      "gpt4": "GPT-4",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    },
+    "inputPlaceholder": "Type your message...",
+    "send": "Send",
+    "newChat": "New Chat",
+    "noMessages": "Start a new conversation",
+    "thinking": "Thinking...",
+    "error": "Something went wrong. Please try again."
+  },
+  "history": {
+    "title": "Chat History",
+    "noHistory": "No chat history yet",
+    "startChatting": "Start a new conversation to see it here",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this conversation?",
+    "searchPlaceholder": "Search conversations..."
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Your account information and AI-generated insights",
+    "email": "Email",
+    "name": "Name",
+    "memberSince": "Member Since",
+    "aiSummary": "AI-Generated Summary",
+    "aiSummaryDescription": "Based on your conversations, here's what we learned about you:",
+    "edit": "Edit Profile",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "updateSuccess": "Profile updated successfully",
+    "stats": {
+      "title": "Your Stats",
+      "totalChats": "Total Chats",
+      "messagesExchanged": "Messages Exchanged",
+      "favoriteModel": "Favorite Model"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language"
+  }
+}

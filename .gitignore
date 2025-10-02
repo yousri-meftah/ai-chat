@@ -1,0 +1,47 @@
+# --- Global ---
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+# git@github.com:yousri-meftah/ai-chat.git
+Backend/__pycache__/
+Backend/*.py[cod]
+Backend/*.pyo
+Backend/*.pyd
+Backend/*.egg-info/
+Backend/.pytest_cache/
+Backend/.coverage
+Backend/htmlcov/
+Backend/.tox/
+Backend/.mypy_cache/
+Backend/.ruff_cache/
+Backend/venv/
+Backend/.venv/
+Backend/env/
+Backend/app/core/.env
+Backend/app.db
+Backend/*.sqlite
+
+frontend/node_modules/
+frontend/.npm/
+frontend/.cache/
+frontend/.next/
+frontend/.nuxt/
+frontend/dist/
+frontend/build/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# --- Docker ---
+*.pid
+*.seed
+docker-compose.override.yml
+todo.txt
