@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter
 from slowapi.util import get_remote_address
@@ -45,16 +45,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/healthz")
+# ✅ Group all routes under /api
+api_router = APIRouter(prefix="/api")
+
+@api_router.get("/healthz")
 @limiter.limit("10/minute")
 def healthz(request: Request):   
     return {"status": "ok"}
 
-app.include_router(auth_router)
-app.include_router(chats_router)
-app.include_router(ai_router)
-app.include_router(messages_router)
+# Mount routers under /api
+api_router.include_router(auth_router, prefix="/auth")
+api_router.include_router(chats_router, prefix="/chats")
+api_router.include_router(ai_router, prefix="/ai")
+api_router.include_router(messages_router, prefix="/messages")
 
+app.include_router(api_router)
+
+# Language header middleware
 @app.middleware("http")
 async def add_lang_header(request: Request, call_next):
     response = await call_next(request)
