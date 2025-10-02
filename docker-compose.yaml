@@ -1,11 +1,21 @@
 version: "3.9"
+
 services:
   backend:
-    build: .
-    container_name: fastapi-backend
+    build: ./Backend
+    container_name: ai-chat-backend
+    volumes:
+      - ./Backend:/app
     ports:
       - "8000:8000"
-    env_file:
-      - .env
+
+  frontend:
+    build: ./frontend
+    container_name: ai-chat-frontend
     volumes:
-      - .:/app 
+      - ./frontend:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+
