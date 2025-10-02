@@ -54,10 +54,10 @@ def healthz(request: Request):
     return {"status": "ok"}
 
 # Mount routers under /api
-api_router.include_router(auth_router, prefix="/auth")
-api_router.include_router(chats_router, prefix="/chats")
-api_router.include_router(ai_router, prefix="/ai")
-api_router.include_router(messages_router, prefix="/messages")
+api_router.include_router(auth_router)
+api_router.include_router(chats_router)
+api_router.include_router(ai_router)
+api_router.include_router(messages_router)
 
 app.include_router(api_router)
 
