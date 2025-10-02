@@ -36,7 +36,7 @@ cd ai-chat
 ```
 
 ### 2. Environment variables
-Create a `.env` file in `/backend`:
+Create a `.env` file in `/backend/app/core`:
 
 ```ini
 APP_NAME=AI Chat Backend

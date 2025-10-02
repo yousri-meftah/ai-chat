@@ -16,19 +16,15 @@ from app.messages.router import router as messages_router
 
 settings = get_settings()
 
-# the best way is to use migration tools like alembic, but for simplicity we use this
 Base.metadata.create_all(bind=engine)
 
-# Rate limiter
 limiter = Limiter(key_func=get_remote_address)
 
 app = FastAPI(title=settings.APP_NAME)
 app.state.limiter = limiter
 
-# ✅ Proper middleware for slowapi
 app.add_middleware(SlowAPIMiddleware)
 
-# ✅ Custom JSON error handler instead of default HTML
 @app.exception_handler(RateLimitExceeded)
 def rate_limit_handler(request: Request, exc: RateLimitExceeded):
     return JSONResponse(
@@ -36,7 +32,6 @@ def rate_limit_handler(request: Request, exc: RateLimitExceeded):
         content={"detail": "Too many requests, please slow down."}
     )
 
-# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.BACKEND_CORS_ORIGINS or ["*"],
@@ -45,15 +40,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Group all routes under /api
-api_router = APIRouter(prefix="/api")
+# api_router = APIRouter(prefix="/api")
+api_router = APIRouter()
 
 @api_router.get("/healthz")
 @limiter.limit("10/minute")
 def healthz(request: Request):   
     return {"status": "ok"}
 
-# Mount routers under /api
 api_router.include_router(auth_router)
 api_router.include_router(chats_router)
 api_router.include_router(ai_router)
@@ -61,7 +55,6 @@ api_router.include_router(messages_router)
 
 app.include_router(api_router)
 
-# Language header middleware
 @app.middleware("http")
 async def add_lang_header(request: Request, call_next):
     response = await call_next(request)
